@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("./font/Rubik-Light.ttf") format("truetype");
+}
+
+$background: #000000;
+$button_background: #000000;
+$button_font_color: #FFFFFF;
+$button_border_color: transparentize($button_font_color, 0.25);
+
+$button_background--clicked: $button_font_color;
+$button_font--clicked: #000000;
+
+$button_background--hover: #1782FF;
+
+$button-size: 60px;
+$font: "Rubik", "sans serif";
+
+body {
+  font-family: $font;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: $background;
+  color: $button_font_color;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.main-wrap {
+  margin-top: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screen-output {
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  height: $button-size;
+  border: solid 1.5px $button_border_color;
+  border-radius: 6px;
+  margin: 4px;
+  transition: all 350ms ease;
+}
+
+.display {
+  flex-grow: 1;
+  padding: 15px;
+  display: block;
+  min-height: $button-size;
+  height: auto;
+  max-width: 700px;
+  word-wrap: break-word;
+}
+
+.key {
+  display: block;
+  width: $button-size;
+}
+
+.button {
+  font-family: $font;
+  font-weight: 300;
+  background-color: $background;
+  color: $button_font_color;
+  font-size: 22px;
+  padding: 0;
+
+   &:hover {
+    background-color: $button_background--hover;
+  }
+
+  &:active {
+    background-color: $button_background--clicked;
+    color: $button_font--clicked;
+  }
+}
+
+.button-clear {
+  display: inline-block;
+  padding: 15px;
+}
+
+.keyboard_line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.space {
+  width: 100%;
+  max-width: 300px;
+}
+
+.button--clicked {
+  background-color: $button_background--clicked;
+  color: $button_font--clicked;
+}
