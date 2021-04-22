@@ -16,7 +16,6 @@ for (const button of buttons) {
         if (evt.key === button.textContent) {
             button.click();
             button.classList.add('button--clicked');
-            console.log(evt.key);
         }
 
         if (evt.key === "Backspace") {
